@@ -73,3 +73,12 @@ CREATE TABLE Company_Users(
 	FOREIGN KEY (companyId) REFERENCES Company(id),
 	FOREIGN KEY (usersId) REFERENCES Users(id)
 );
+
+INSERT INTO Company(name) VALUES ('IT Hacker d.o.o.');
+INSERT INTO Category(name) VALUES ('Programmer');
+INSERT INTO Region(name) VALUES ('Osrednjeslovenska');
+INSERT INTO JobType(type) VALUES ('Nedoločen čas'), ('Določen čas'), ('s.p.');
+INSERT INTO Job(name, description, categoryId, companyId, regionId, jobTypeId) VALUES ('Java/Android programer', 'Programiranje mobilnih in TV aplikacij za operacijski sistem Android', 1, 1, 1, 1);
+INSERT INTO Users(firstName, lastName, location, phoneNumber, email, username, regionId) VALUES ('David', 'Bukovšek', 'Medvode', '040 501 891', 'david.bukovsek@gmail.com', 'Buka91', 1);
+INSERT INTO Job_Users(jobId, usersId) VALUES(1, 1);
+INSERT INTO Company_Users(companyId, usersId) VALUES (1, 1);
